@@ -1,0 +1,179 @@
+name: Implementation Task
+description: Create one controlled Lingua implementation task.
+title: "[TASK] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Lingua Execution Task
+
+        One issue must represent one clear implementation outcome.
+
+        Before starting work, read:
+        - AGENTS.md
+        - PRODUCT.md
+        - QUALITY.md
+        - DESIGN.md when the task affects UI, RTL, localization, accessibility, layout, components, typography, color, or motion
+        - ARCHITECTURE.md when the task affects domain logic, APIs, persistence, authentication, analytics, AI, subscriptions, progression, assessments, or backend behavior
+
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Task Type
+      options:
+        - Feature Implementation
+        - Bug Fix
+        - Technical Foundation
+        - Quality Improvement
+        - Design System Implementation
+        - Content and Curriculum
+        - Analytics and AI
+        - Launch and Operations
+    validations:
+      required: true
+
+  - type: dropdown
+    id: workstream
+    attributes:
+      label: Workstream
+      options:
+        - Mobile App
+        - Backend and API
+        - Content and Curriculum
+        - Quality Assurance
+        - Analytics and AI
+        - Subscription and Billing
+        - Launch and Operations
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      options:
+        - Foundation
+        - Core Learning Loop
+        - Progression and Retention
+        - Monetization
+        - Beta and Launch
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Required Outcome
+      description: Describe the single completed result this task must produce.
+      placeholder: |
+        Example:
+        Implement the application bootstrap with routing, localization initialization,
+        theme initialization, and a safe startup error boundary.
+    validations:
+      required: true
+
+  - type: textarea
+    id: product_context
+    attributes:
+      label: Product Context
+      description: State the user or product need this task serves.
+      placeholder: |
+        Explain why this task exists and which learner or operational outcome it supports.
+    validations:
+      required: true
+
+  - type: textarea
+    id: approved_references
+    attributes:
+      label: Approved References
+      description: List the relevant approved files, documents, sections, screens, or existing code patterns.
+      placeholder: |
+        Example:
+        - PRODUCT.md: Application Foundation priority
+        - ARCHITECTURE.md: Flutter Application Structure
+        - DESIGN.md: Flutter Directionality Rules
+        - UX Layout Specifications: Screen reference when applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In Scope
+      description: List only the work required to complete this task.
+      placeholder: |
+        - Item 1
+        - Item 2
+        - Item 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of Scope
+      description: Define work that must not be included in this task.
+      placeholder: |
+        - Do not build unrelated screens.
+        - Do not refactor unrelated features.
+        - Do not introduce new packages unless explicitly required.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List required completed tasks, services, decisions, credentials, or documents. Write None when there are no dependencies.
+      placeholder: |
+        - None
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define the observable conditions that prove the task is complete.
+      placeholder: |
+        - Criterion 1
+        - Criterion 2
+        - Criterion 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Required Validation
+      description: List required tests, checks, flow verification, RTL validation, accessibility checks, and quality requirements.
+      placeholder: |
+        - flutter format .
+        - flutter analyze
+        - Relevant flutter test command
+        - Verify loading, error, and empty states when relevant
+        - Verify RTL and text expansion when user-facing layout is affected
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks or Escalation Points
+      description: List conflicts, irreversible decisions, security concerns, external dependencies, or product decisions requiring discussion. Write None when there are no known risks.
+      placeholder: |
+        - None
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Task Confirmation
+      options:
+        - label: This issue contains one clear implementation outcome.
+          required: true
+        - label: This task does not change approved product, design, or architecture decisions without explicit approval.
+          required: true
+        - label: The acceptance criteria and validation requirements are specific enough to verify completion.
+          required: true
