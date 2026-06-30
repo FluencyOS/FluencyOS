@@ -148,7 +148,7 @@ body:
       label: Required Validation
       description: List required tests, checks, flow verification, RTL validation, accessibility checks, and quality requirements.
       placeholder: |
-        - flutter format .
+        -dart format --output=none --set-exit-if-changed .
         - flutter analyze
         - Relevant flutter test command
         - Verify loading, error, and empty states when relevant
