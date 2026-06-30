@@ -26,7 +26,7 @@ Describe the single outcome completed by this pull request.
 
 ## Validation Performed
 
-* [ ] `flutter format .`
+* [ ] `dart format --output=none --set-exit-if-changed . .`
 * [ ] `flutter analyze`
 * [ ] Relevant automated tests
 * [ ] Affected user flow tested manually
